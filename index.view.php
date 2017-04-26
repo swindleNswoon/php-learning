@@ -11,11 +11,11 @@
 	</style>
 </head>
 <body>
-	<h1>Task for the Day</h1>
-	<ul>
-		<?php foreach($task as $heading => $value) : ?>
-	    <li><strong><?= ucwords($heading); ?></strong> <?= $value; ?></li>
-	    <?php endforeach; ?>
-	</ul>
+	<form action="index.php" method="get">
+		<label>Please Enter Your Age:</label>
+		<input type="text" name="age">
+		<input type="submit">
+	</form>
+	<p><?= ageChecker($_GET["age"]); ?></p>
 </body>
 </html>
