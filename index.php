@@ -34,6 +34,8 @@ $tasks[0]->complete();
 //$task->complete(); //complete task
 
 //var_dump($task->isComplete());
+
+//testing that git pull worked
 	
 require 'index.view.php';
 ?>
