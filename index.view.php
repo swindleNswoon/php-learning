@@ -11,11 +11,17 @@
 	</style>
 </head>
 <body>
-	<form action="index.php" method="get">
-		<label>Please Enter Your Age:</label>
-		<input type="text" name="age">
-		<input type="submit">
-	</form>
-	<p><?= ageChecker($_GET["age"]); ?></p>
+	<ul>
+	<?php foreach ($tasks as $task) : ?>
+		<li>
+			<?php if($task->completed) : ?>
+				<strike><?= $task->description; ?></strike>
+			<?php else: ?>
+				<?= $task->description; ?>
+			<?php endif; ?>
+			
+		</li>
+	<?php endforeach; ?>
+	</ul>
 </body>
 </html>
