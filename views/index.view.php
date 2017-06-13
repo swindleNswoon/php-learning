@@ -2,26 +2,18 @@
 <html>
 <head>
 	<title>Learning PHP</title>
-	<style>
-		header {
-			background: #e3e3e3;
-			padding: 2em;
-			text-align: center;
-		}
-	</style>
+	<link rel="stylesheet" type="text/css" href="views/public/css/styles.css">
 </head>
 <body>
-	<ul>
-	<?php foreach ($tasks as $task) : ?>
-		<li>
-			<?php if($task->completed) : ?>
-				<strike><?= $task->description; ?></strike>
-			<?php else: ?>
-				<?= $task->description; ?>
-			<?php endif; ?>
-			
-		</li>
-	<?php endforeach; ?>
+	<?php require('partials/nav.php'); ?>
+	
+		<h1>Submit Your Name</h1>
+
+		<form method="POST" action="/names">
+			<input type="" name="name">
+			<button type="submit">Submit</button>
+
+		</form>
 	</ul>
 </body>
 </html>
